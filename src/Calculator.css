@@ -1,0 +1,105 @@
+/* Background color for the entire calculator */
+.calculator {
+    width: 1200px;
+    background-color: #000000; /* Black background */
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 30px;
+    font-family: "Helvetica Neue", sans-serif;
+    margin: 50px auto; /* Center the calculator on the page */
+  }
+  
+  /* Input field style */
+  .display input {
+    width: 100%;
+    height: 200px; /* Increased height for the display */
+    background-color: #1c1c1e;
+    color: white;
+    border: white;
+    font-size: 158px; /* Increased font size */
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  /* Buttons container with grid layout */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns */
+    grid-template-rows: repeat(5, 1fr); /* 5 rows for buttons */
+    gap: 50px; /* Increased gap between buttons */
+    margin-top: 30px;
+  }
+  
+  /* General button styling */
+  button {
+    width: 100%;
+    height: 130px; /* Increased height for the buttons */
+    font-size: 90px; /* Increased font size */
+    border: 2px solid #d1d1d6;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #e0e0e5;
+  }
+  
+  /* Button active state */
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Button focus state */
+  button:focus {
+    outline: none;
+  }
+  
+  /* Special button color for AC, Delete, %, . and +/- */
+  button.clear, button.delete, button.percent, button.dot, button.sign-toggle {
+    background-color: #a7a7a7;
+    color: white;
+  }
+  
+  /* Special button hover effect */
+  button.clear:hover, button.delete:hover, button.percent:hover, button.dot:hover, button.sign-toggle:hover {
+    background-color: #8a8a8a;
+  }
+  
+  /* Operator buttons: /, *, +, -, = */
+  button.operator {
+    background-color: #ec952c;
+    color: white;
+  }
+  
+  button.operator:hover {
+    background-color: #e68123;
+  }
+  
+  /* Number buttons: 1-9 and 0 */
+  button.number {
+    background-color: #333333;
+    color: white;
+  }
+  
+  button.number:hover {
+    background-color: #4a4a4a;
+  }
+  
+  /* Styling for specific buttons */
+  button.clear {
+    grid-column: span 4; /* Makes the AC button span across the full width */
+  }
+  
+  button.zero {
+    grid-column: span 2; /* Makes the 0 button span across 2 columns */
+  }
+  
+  /* Ensure the delete button is in the same grid as the AC button */
+  button.delete {
+    grid-column: span 1;
+  }
+  
